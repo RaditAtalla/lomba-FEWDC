@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	font-family: "SF Pro Display", sans-serif;
+}
+
+:root {
+	--yellow-primary: #f5bb00;
+	--grey-primary: #1B2021;
+}
+
+body{
+	background: var(--grey-primary);
+}
+
+/* ? Navbar */
+
+header {
+	position: fixed;
+	width: 100vw;
+	z-index: 200;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding: 2em 3.5em;
+}
+
+header.move{
+	background: var(--yellow-primary);
+	border-bottom: 1px solid white;
+}
+
+.logo_wrapper,
+header nav,
+.contact_btn_wrapper{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+header h1 a,
+header nav a {
+	color: white;
+	text-decoration: none;
+	transition: 0.15s;
+}
+
+header nav a:first-child{
+	text-decoration: underline;
+}
+
+header nav a:hover{
+	text-decoration: underline;
+}
+
+header nav {
+	gap: 2em;
+}
+
+header nav a {
+	font-size: 1.15rem;
+}
+
+.contact.btn {
+	color: var(--yellow-primary);
+	text-decoration: none;
+
+	font-size: 1.15rem;
+	font-weight: 900;
+
+	background-color: white;
+	border-radius: 4px;
+	padding: 0.5em 1em;
+}
+
+/* ? Hero */
+
+.hero_section {
+	background-image: url("../img/background.png");
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2em;
+
+	padding-top: 7em;
+	position: relative;
+	z-index: 99;
+
+}
+
+.hero_section .title {
+	text-align: center;
+	color: white;
+}
+
+.hero_section .title h1 {
+	font-size: 8rem;
+}
+
+.hero_section .title p {
+	font-size: 2rem;
+}
+
+/* ? Quote */
+
+.quote_section{
+	background: var(--grey-primary);
+	color: white;
+
+	padding: 1em 10em;
+
+	position: relative;
+}
+
+.quote h2{
+	width: 700px;
+
+	font-size: 2.5rem;
+	font-family: "Lora";
+	font-weight: 300;
+
+	position: relative;
+	z-index: 100;
+}
+
+.quote h2 span{
+	font-family: "SF Pro Display";
+	font-weight: 500;
+	color: var(--yellow-primary);
+}
+
+.quote_section img{
+	position: absolute;
+}
+
+.singel_quote_circle{
+	display: flex;
+	justify-content: center;
+	align-items: end;
+
+	width: 100px;
+	height: 100px;
+	background: var(--yellow-primary);
+	border-radius: 100px;
+
+	position: absolute;
+	z-index: 99;
+
+	margin: -50px 0 0 -50px;
+}
+
+.singel_quote{
+	font-family: serif;
+	font-size: 5rem;
+}
+
+/* ? Provide */
+
+.provide_section{
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.provide_section h2{
+	margin-top: 3em;
+
+	text-align: center;
+	color: white;
+
+	font-size: 3rem;
+}
+
+.provide_collection{
+	width: 1200px;
+
+	margin-top: 5em;
+
+	display: flex;
+	justify-content: space-between;
+}
+
+.provide_card{
+	width: 300px;
+	height: 300px;
+	border-radius: 10px;
+}
+
+.safe{
+	background-image: url("../img/pizza.png");
+	background-size: cover;
+}
+
+/* ? How it works */
+
+.how_it_works_section{
+	margin-top: 5em;
+
+	display: flex;
+	justify-content: center;
+	gap: 3em;
+
+	color: white;
+}
+
+.HIW_content{
+	display: flex;
+	flex-direction: column;
+	gap: 3em;
+}
+
+.HIW_content .title h2{
+	color: var(--yellow-primary);
+	font-size: 2rem;
+	font-weight: 400;
+	text-align: start;
+}
+
+.HIW_content .title h3{
+	font-size: 3.5rem;
+	line-height: 99%;
+	text-align: start;
+}
+
+.steps{
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+.step_1,
+.step_2,
+.step_3{
+	display: flex;
+	align-items: center;
+	gap: 1em;
+}
+
+.step_icon{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	height: 50px;
+	width: 50px;
+	background-color: var(--yellow-primary);
+
+	border-radius: 100%;
+}
+
+/* ? Growth */
+
+.growth_section{
+	margin-top: 5em;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1em;
+
+	color: white;
+}
+
+.growth_section h2{
+	text-align: center;
+	font-size: 3rem;
+}
+
+.growth_section p{
+	font-size: 1.5rem;
+	color: var(--yellow-primary);
+}
+
+/* ? Testimony */
+
+.testimony{
+	margin-top: 3em;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2em;
+
+	color: white;
+}
+
+.testimony .title h2{
+	color: var(--yellow-primary);
+	font-size: 2rem;
+	text-align: center;
+}
+
+.testimony .title h3{
+	font-size: 3rem;
+}
+
+.testimony_content{
+	display: flex;
+	gap: 5em;
+}
+
+.testimony_card{
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+
+	width: 600px;
+}
+
+.user_info{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.user_profile{
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+	font-size: 1.15rem;
+
+}
+
+.user_profile img{
+	height: 50px;
+	width: 50px;
+	border-radius: 100%;
+}
+
+.star_given{
+	display: flex;
+}
+
+/* ? Download */
+
+.download_section{
+	margin-top: 5em;
+	padding: 0 8em;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	color: white;
+}
+
+.download_instruction{
+	font-size: 2.5rem;
+
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+.download_link{
+	font-size: 1.5rem;
+
+	display: flex;
+	gap: 1em;
+}
+
+.download_link a{
+	padding: 0.75em 1.5em;
+	background-color: var(--yellow-primary);
+	border-radius: 50px;
+
+	display: flex;
+	align-items: center;
+	gap: 1em;
+
+	color: white;
+	text-decoration: none;
+}
+
+/* ? Footer */
+
+footer{
+	color: white;
+	background-color: #191D1E;
+
+	display: flex;
+	flex-direction: column;
+	gap: 3em;
+
+	padding: 5em 3em;
+}
+
+footer a{
+	color: white;
+	text-decoration: none;
+}
+
+.footer_links{
+	display: flex;
+	gap: 5em;
+
+}
+
+.links,
+.company,
+.get_in_touch,
+.download_the_app{
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+.links nav,
+.company nav,
+.get_in_touch nav{
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+}
+
+.download_the_app nav{
+	display: flex;
+	gap: 1em;
+}
+
+footer p:last-of-type{
+	border-top: 1px solid white;
+	padding-top: 1em;
+
+	font-size: 1.15rem;
+}
